@@ -1,1 +1,1 @@
-# camp-life
+# Camp Life Landing Page
