@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Questrial&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: black;
+    font-family: 'Questrial', sans-serif;
+    cursor: default;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+nav {
+    background-color: rgba(165, 42, 42, 0.8);
+    box-sizing: border-box;
+    padding: 1rem;
+    min-height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav h1 {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+}
+
+nav .logo a {
+    color: white;
+    text-decoration: none;
+}
+
+#nav-links {
+    background: none;
+    position: static;
+    height: auto;
+    width: auto;
+    list-style-type: none; 
+    display: flex;
+    flex-direction: row;
+    transform: translateX(0%);
+}
+
+@keyframes navLinksFadeIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes navLinksFadeOut {
+    from {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+#nav-links li a {
+    box-sizing: border-box;
+    border: none;
+    background: none;
+    padding: 1.6rem 1rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#nav-links li a.current {
+    background: lightgray;
+    color: black;
+}
+
+#nav-links li a:hover, button:hover {
+    animation-name: ahover;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ahover {
+    from {
+        background-color: lightslategray;
+        color: white;
+    }
+    to {
+        background-color: lightgray;
+        color: black;
+    }
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    line-height: 10px;
+    width: 2.5rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.line1, .line2, .line3 {
+    width: 2.5rem;
+    height: 0.4rem;
+    background: white;
+    
+}
+
+.line1 {
+    transition: transform 0.2s ease-in;
+}
+
+.line2 {
+    transition: opacity 0.2s ease-in;
+}
+
+.line3 {
+    transition: transform 0.s ease-in;
+}
+
+input {
+    font-size: 1.2rem;
+    display: none;
+}
+
+.search {
+    display: none;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+section {
+    width: 100%;
+    min-height: 52rem;
+    position: relative;
+}
+
+#camp-intro {
+    
+    background-image: url("../images/camp2.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 90%;
+}
+
+#camp-intro h2, p {
+    color: white;
+    padding: 1rem;
+    text-align: left;
+}
+
+#camp-intro h2 {
+    padding-top: 3rem;
+    font-size: 3rem;
+}
+
+#camp-intro hr {
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    border: none;
+    background-color: white;
+    height: 0.4rem;
+    width: 50rem;
+}
+
+#camp-intro p {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    line-height: 3rem;
+
+    position: absolute;
+    width: 40rem;
+    min-height: 20rem;
+}
+
+#camp-middle {
+    background-color: lightgray;
+}
+
+#camp-middle p {
+    padding-top: 10rem;
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+    line-height: 3rem;
+    left: calc(50vw - 20rem);
+
+    position: absolute;
+    width: 40rem;
+    min-height: 20rem;
+}
+
+#camp-middle .city-icons {
+    position: absolute;
+    text-align: center;
+    width: 40rem;
+    bottom: 5rem;
+    left: calc(50vw - 20rem);
+}
+
+#camp-middle .city-icons i {
+    font-size: 4rem;
+}
+
+#camp-end {
+    background-image: url("../images/camp3.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#camp-end p {
+    padding-top: 15rem;
+    line-height: 3rem;
+    text-align: right;
+    font-size: 2rem;
+
+    position: absolute;
+    width: 40rem;
+    min-height: 20rem;
+    right: 0;
+}
+
+footer {
+    min-height: 15rem;
+    max-height: 15rem;
+    background-color: brown;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-shrink: 0;
+}
+
+footer h3 {
+    padding-top: 2rem;
+    text-align: center;
+    color: white;
+}
+
+footer .center-align a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .center-align {
+    padding: 1rem;
+    text-align: center;
+}
+
+#footer-links {
+    width: 30rem;
+    margin: 0 auto;
+    padding-top: 1rem;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#footer-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icons i {
+    font-size: 2.5rem;
+    color: white;
+    padding: 1rem;
+}
+
+.footer-icons i:hover {
+    animation-name: ihover;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ihover {
+    from {
+        background-color: lightslategray;
+        color: white;
+    }
+    to {
+        background-color: lightgray;
+        color: black;
+    }
+}
+
+@media (max-width: 900px) {
+    #nav-links {
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        display: block;
+        width: 100%;
+        background: maroon;
+        z-index: 1;
+        transform: translateX(100%);
+    }
+
+    #nav-links li a {
+        display: block;
+        width: 100%;
+        max-height: 4rem;
+        padding: 1rem;
+        box-sizing: border-box;
+        border-bottom: 1px solid brown;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #camp-intro h2, p {
+        text-align: center;
+    }
+
+    #camp-intro hr {
+        width: 40rem;
+        margin: 0 auto;
+    }
+    
+    #camp-intro p,
+    #camp-middle p,
+    #camp-end p {
+        position: static;
+        width: 30rem;
+        min-height: 20rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 700px) {
+    #camp-intro hr {
+        width: 30rem;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    #camp-intro p,
+    #camp-middle p,
+    #camp-end p {
+        width: 20rem;
+        min-height: 20rem;
+    }
+
+    #camp-intro hr {
+        width: 20rem;
+        margin: 0 auto;
+    }
+}
