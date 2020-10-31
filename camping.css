@@ -155,10 +155,8 @@ section {
 }
 
 #camp-intro {
-    
-    background-image: url("../images/camp2.jpg");
+    background-image: url("images/camp.jpg");
     background-size: cover;
-    -webkit-background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center 90%;
@@ -225,7 +223,7 @@ section {
 }
 
 #camp-end {
-    background-image: url("../images/camp3.jpeg");
+    background-image: url("images/lake.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
